@@ -14,15 +14,15 @@ public class Test_Javassist {
         /**
          * test
          */
-        ClassPool classPool = ClassPool.getDefault();
-//        CtClass ctClass = classPool.makeClass("io.github.dingfeiyang.javassist.basic.Dfy.java");
-//        System.out.println(ctClass);
-        CtClass ctClass = classPool.get("io.github.dingfeiyang.javassist.basic.Dfy");
-        ctClass.setSuperclass(classPool.get("io.github.dingfeiyang.javassist.basic.Super_Dfy"));
-        CtMethod ctMethod = CtNewMethod.make("public int add(int a, int b) { return a + b ;}", ctClass);
-        ctClass.addMethod(ctMethod);
-        CtMethod addMethod = ctClass.getDeclaredMethod("add");
-        System.out.println(addMethod);
+//        ClassPool classPool = ClassPool.getDefault();
+////        CtClass ctClass = classPool.makeClass("io.github.dingfeiyang.javassist.basic.Dfy.java");
+////        System.out.println(ctClass);
+//        CtClass ctClass = classPool.get("io.github.dingfeiyang.javassist.basic.Dfy");
+//        ctClass.setSuperclass(classPool.get("io.github.dingfeiyang.javassist.basic.Super_Dfy"));
+//        CtMethod ctMethod = CtNewMethod.make("public int add(int a, int b) { return a + b ;}", ctClass);
+//        ctClass.addMethod(ctMethod);
+//        CtMethod addMethod = ctClass.getDeclaredMethod("add");
+//        System.out.println(addMethod);
         /**
          * 代理
          */
@@ -31,7 +31,7 @@ public class Test_Javassist {
 //        // 为代理类添加接口
 //        ctClass.addInterface(classPool.get("io.github.dingfeiyang.javassist.basic.MyInterface"));
 //        // 添加委托对象字段
-//        CtField delegateField = new CtField(classPool.get("io.github.dingfeiyang.javassist.basic.MyInterface"), "delegate", ctClass);
+//        CtField delegateField = new CtField(classPool.get("io.github.dingfeiyang.javassist.basic.MyInterface"), "ss", ctClass);
 //        delegateField.setModifiers(Modifier.PRIVATE);
 //        ctClass.addField(delegateField);
 //        System.out.println(ctClass);
